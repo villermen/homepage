@@ -38,12 +38,11 @@ function upDate() {
 
     // Teehee
     if (hours == 13 && minutes == 33 && seconds == 37) {
-        var audio = new Audio("/soundboard-api/samples/sfx/airhorn2.ogg");
-        audio.volume = 0.5;
+        var audio = new Audio("/soundboard/api/samples/sfx/airhorn2.ogg");
         audio.play();
     }
 
-    //schedule next update at its change point
+    //schedule next update at it\'s changing point
     setTimeout(upDate, 1000 - date.getMilliseconds());
 }
 

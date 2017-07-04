@@ -1,0 +1,22 @@
+{
+    "name": "villermen/homepage",
+    "type": "project",
+    "homepage": "https://viller.men/home/",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Villermen",
+            "email": "villermen@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/http-foundation": "^3.3",
+        "symfony/templating": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Villermen\\Homepage\\": "src/"
+        }
+    }
+}

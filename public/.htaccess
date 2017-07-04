@@ -1,1 +1,4 @@
-RewriteRule ^(\w+(/?\w*)*(\?.*)?)$ index.php/$1
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . /index.php [L]
