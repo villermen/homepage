@@ -46,11 +46,11 @@
 </section>
 
 <section>
-    <div class="clock center info-section"></div>
+    <p class="clock center"></p>
 
-    <div class="ip center info-section">
+    <p class="ip center">
         Your IP: <?=$_SERVER["REMOTE_ADDR"]?>
-    </div>
+    </p>
 </section>
 
 <section>
@@ -63,8 +63,8 @@
                 ["Lead to Live", "vertical", "/leadtolive/", "leadtolive.png"],
                 ["RuneScape player lookup", "horizontal", "/rslookup/", "rslookup.png"],
                 ["Soundboard", "small", "/soundboard/", "soundboard.png"],
-                ["TI-Basic", "small", "/tibasic/", "tibasic.png"],
-                ["Gamemaker 7", "small", "/gamemaker/", "gamemaker.png"],
+                ["TI-Basic", "small", $baseUrl."tibasic/", "tibasic.png"],
+                ["Gamemaker 7", "small", $baseUrl."gamemaker/", "gamemaker.png"],
                 ["Is it team time yet?", "small", "/isitteamtimeyet/", "isitteamtimeyet.png"],
             ]
         ]);

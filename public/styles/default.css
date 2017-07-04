@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
 
-html, body{
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body  {
+body {
     background-color: #001000;
     color: #00c800;
     font-family: "Roboto", sans-serif;
@@ -20,7 +20,7 @@ a {
     color: #8CD28C;
     text-decoration: none;
 }
-a:hover  {
+a:hover {
     text-decoration: underline;
 }
 h1, h2 , h3, h4, h5, h6 {
@@ -29,6 +29,9 @@ h1, h2 , h3, h4, h5, h6 {
 }
 h3, h4, h5, h6 {
     font-weight: normal;
+}
+p {
+    margin: 0 0 1rem 0;
 }
 section, .section {
     text-align: left;
@@ -42,8 +45,8 @@ section, .section {
 main {
     display: block;
 }
-footer {
-    text-align: right !important; /* because section class will go later */
+footer, footer.section {
+    text-align: right;
 }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
@@ -65,9 +68,6 @@ footer {
     animation: spin 100s linear infinite;
     -webkit-animation: spin 100s linear infinite;
     -moz-animation: spin 100s linear infinite;
-}
-.center {
-    text-align: center !important;
 }
 .avatar {
     float: left;
@@ -156,4 +156,7 @@ footer {
 }
 .clear {
     clear: both;
+}
+.center {
+    text-align: center;
 }
