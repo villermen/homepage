@@ -8,7 +8,7 @@ html, body {
     box-sizing: border-box;
 }
 body {
-    background-color: #001000;
+    background-color: black;
     color: #00c800;
     font-family: "Roboto", sans-serif;
     padding: 0.8rem 0.8rem 0 0.8rem;
