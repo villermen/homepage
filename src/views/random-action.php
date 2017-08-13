@@ -96,6 +96,7 @@ $randomAction = [
     "know when to quit",
     "step into the tall grass", // Pokémon
     "refactor for fun",
+    "require stroyent", // ET:QW
 ];
 
 echo $randomAction[mt_rand(0, count($randomAction) - 1)];
