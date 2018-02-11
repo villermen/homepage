@@ -77,10 +77,10 @@
     <?php
         echo $view->render("project-buttons", [
             "buttonData" => [
-                ["Minecraft server", "large", "/minecraft/", "minecraft.png"],
-                ["Toxic clansite", "horizontal", "/toxic/", "toxic.png"],
-                ["Vapor homepage", "vertical", "/vapor/", "vapor.png"],
-                ["Omnicash", "small", "/omnicash/", "omnicash.png"],
+                ["Minecraft server", "large", "/archive/minecraft/", "minecraft.png"],
+                ["Toxic clansite", "horizontal", "/archive/toxic/", "toxic.png"],
+                ["Vapor homepage", "vertical", "/archive/vapor/", "vapor.png"],
+                ["Omnicash", "small", "/archive/omnicash/", "omnicash.png"],
             ]
         ]);
     ?>
