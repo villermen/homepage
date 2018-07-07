@@ -8,7 +8,7 @@ $randomAction = [
     "goof around",
     "think in code",
     "type in <span style=\"font-family:'Comic Sans MS';\">Comic Sans</span>",
-    "google urls",
+    "google URLs", // Old people
     "remember my purpose", // RS TTW
     "resist symmetry", // MC Zisteau
     "belong in a museum", // LoL Ezreal
@@ -82,7 +82,7 @@ $randomAction = [
     "want fries with that",
     "take things out of context",
     "may contain traces of nuts", // Allergy warning
-    "press space to win", // Super press space to win action rpg 2009
+    "press space to win", // Super Press Space to Win Action RPG 2009
     "juggle types", // PHP and other weakly-typed programming langauges
     "mangled in translation the google",
     "meet all standards", // Undertale
@@ -97,6 +97,10 @@ $randomAction = [
     "step into the tall grass", // Pokémon
     "refactor for fun",
     "require stroyent", // ET:QW
+    "forget about Freeman", // Half-Life
+    "draw a vertical blank",
+    "double check for double meanings", // Saint Motel
+    "rule the world and still finish all my homework", // WarioWare: Touched!
 ];
 
 echo $randomAction[mt_rand(0, count($randomAction) - 1)];
