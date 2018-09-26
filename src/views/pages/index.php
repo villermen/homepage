@@ -1,33 +1,25 @@
 <?php
-    /** @var \Symfony\Component\Templating\PhpEngine $view */
-
-    $view->extend("layout");
-
-    $view["slots"]->set("title", "Villermen's homepage");
-
-    $view["slots"]->start("scripts");
+/** @var \Symfony\Component\Templating\PhpEngine $view */
+$view->extend('layout');
+$view['slots']->set('title', 'Villermen\'s homepage');
+$view['slots']->start('scripts');
 ?>
-    <script src="<?=$baseUrl."scripts/jquery-3.2.1.min.js"?>"></script>
-    <script src="<?=$baseUrl."scripts/masonry-4.2.0.min.js"?>"></script>
-    <script src="<?=$baseUrl."scripts/index.js"?>"></script>
+<script src="<?= $baseUrl . 'scripts/masonry-4.2.2.min.js'; ?>"></script>
+<script src="<?= $baseUrl . 'scripts/index.js'; ?>"></script>
 <?php
-    $view["slots"]->stop();
+$view['slots']->stop();
 ?>
-
 <section>
     <h1>Welcome to my website</h1>
-
     <p>
-        <img class="avatar" src="<?=$baseUrl."images/avatar.png"?>" alt="Avatar" />
-
-        Hi, I'm Villermen, I sometimes <?=$view->render("random-action")?>.
+        <img class="avatar" src="<?= $baseUrl . 'images/avatar.png'; ?>" alt="Avatar" />
+        Hi, I'm Villermen, I sometimes <?= $view->render('random-action'); ?>.
     </p>
     <p>
-        I enjoy solving complicated problems in whatever programming language I know.
-        This page is pretty much a display of things I've created in my spare and not so spare time.
-        Below is a display of some of the projects I've worked on that are actually worth mentioning.
+        I enjoy solving complicated problems in whatever programming language I know. This page is pretty much a display
+        of things I've created in my spare and not so spare time. Below is a display of some of the projects I've worked
+        on that are actually worth mentioning.
     </p>
-
     <!-- Iconset by Dan Leech, https://simpleicons.org/ -->
     <div class="contactlinks clear">
         <a class="contactlink steam" href="http://steamcommunity.com/id/villermen" title="Steam">
@@ -44,44 +36,45 @@
         </a>
     </div>
 </section>
-
 <section>
-    <p class="clock center"></p>
+    <div class="clock">
+        <div class="clock__digit clock__digit--hours"></div>
+        <div class="clock__digit clock__digit--minutes"></div>
+        <div class="clock__digit clock__digit--seconds"></div>
+        <div class="clock__date"></div>
+        <div class="clock__timestamp"></div>
+    </div>
 
-    <p class="ip center">
-        Your IP: <?=$_SERVER["REMOTE_ADDR"]?>
-    </p>
+    <div class="ip">
+        Your IP: <?= $_SERVER['REMOTE_ADDR']; ?>
+    </div>
 </section>
-
 <section>
     <h3>Projects that <em>probably</em> still work</h3>
-
     <?php
-        echo $view->render("project-buttons", [
-            "buttonData" => [
-                ["File browser", "vertical", "/browser/", "filebrowser.png"],
-                ["Lead to Live", "vertical", "/leadtolive/", "leadtolive.png"],
-                ["RuneScape player lookup", "horizontal", "/rslookup/", "rslookup.png"],
-                ["Soundboard", "small", "/soundboard/", "soundboard.png"],
-                ["TI-Basic", "small", $baseUrl."tibasic/", "tibasic.png"],
-                ["Gamemaker 7", "small", $baseUrl."gamemaker/", "gamemaker.png"],
-                ["Is it team time yet?", "small", "/isitteamtimeyet/", "isitteamtimeyet.png"],
-            ]
-        ]);
+    echo $view->render('project-buttons', [
+        'buttonData' => [
+            ['File browser', 'vertical', '/browser/', 'filebrowser.png'],
+            ['Lead to Live', 'vertical', '/leadtolive/', 'leadtolive.png'],
+            ['RuneScape player lookup', 'horizontal', '/rslookup/', 'rslookup.png'],
+            ['Soundboard', 'small', '/soundboard/', 'soundboard.png'],
+            ['TI-Basic', 'small', $baseUrl . 'tibasic/', 'tibasic.png'],
+            ['Gamemaker 7', 'small', $baseUrl . 'gamemaker/', 'gamemaker.png'],
+            ['Is it team time yet?', 'small', '/isitteamtimeyet/', 'isitteamtimeyet.png'],
+        ],
+    ]);
     ?>
 </section>
-
 <section>
     <h3>Project archive</h3>
-
     <?php
-        echo $view->render("project-buttons", [
-            "buttonData" => [
-                ["Minecraft server", "large", "/archive/minecraft/", "minecraft.png"],
-                ["Toxic clansite", "horizontal", "/archive/toxic/", "toxic.png"],
-                ["Vapor homepage", "vertical", "/archive/vapor/", "vapor.png"],
-                ["Omnicash", "small", "/archive/omnicash/", "omnicash.png"],
-            ]
-        ]);
+    echo $view->render('project-buttons', [
+        'buttonData' => [
+            ['Minecraft server', 'large', '/archive/minecraft/', 'minecraft.png'],
+            ['Toxic clansite', 'horizontal', '/archive/toxic/', 'toxic.png'],
+            ['Vapor homepage', 'vertical', '/archive/vapor/', 'vapor.png'],
+            ['Omnicash', 'small', '/archive/omnicash/', 'omnicash.png'],
+        ],
+    ]);
     ?>
 </section>
