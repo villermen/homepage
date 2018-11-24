@@ -2,6 +2,7 @@ import * as React from 'react';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import IndexPage from 'components/pages/IndexPage';
 
+// TODO: Code split pages
 const renderPageRouter = () => (
     <Switch>
         <Route exact path="/" component={IndexPage} />
