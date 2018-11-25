@@ -1,14 +1,15 @@
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const babelLoaderOptions = {
     cacheDirectory: true,
 };
 
 export default {
-    entry: './src/index.tsx',
+    entry: path.resolve(__dirname, 'src/index.tsx'),
     output: {
-        filename: 'main.js',
-        path: path.resolve('./dist'),
+        filename: 'main.js?[contenthash]',
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
@@ -25,7 +26,7 @@ export default {
                 options: {
                     limit: 51200, // 50 KiB
                     fallback: 'file-loader',
-                    name: '[path][name].[ext]',
+                    name: '[path][name].[ext]?[hash]',
                 },
             },
             {
@@ -43,7 +44,14 @@ export default {
                         }
                     }
                 ],
-            }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                ],
+            },
         ],
     },
     resolve: {
@@ -56,4 +64,12 @@ export default {
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'assets/index.html',
+            favicon: 'assets/favicon.ico',
+            xhtml: true,
+        }),
+    ]
 };

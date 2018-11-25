@@ -86,7 +86,7 @@ footer, footer.section {
     height: 2000px;
     margin-top: -1000px;
     margin-left: -1000px;
-    background: url("../images/background.png") no-repeat center center;
+    background: url('./images/background.png') no-repeat center center;
     background-size: 100% 100%;
     animation: spin 100s linear infinite;
     -webkit-animation: spin 100s linear infinite;
