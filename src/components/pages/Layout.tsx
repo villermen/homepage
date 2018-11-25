@@ -3,6 +3,7 @@ import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import IndexPage from 'components/pages/IndexPage';
 import NotFoundPage from 'components/pages/NotFoundPage';
 
+// TODO: Background twirl based on time (for refreshes)
 // TODO: Code split pages
 const renderPageRouter = () => (
     <Switch>

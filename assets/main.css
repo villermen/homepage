@@ -133,7 +133,7 @@ footer, footer.section {
     height: 2rem;
 }
 
-.project-buttons {
+.project-button-container {
     margin: 0 auto;
 }
 
@@ -146,17 +146,17 @@ footer, footer.section {
     height: 95px;
 }
 
-.project-button.horizontal {
+.project-button--horizontal {
     width: 300px;
     height: 95px;
 }
 
-.project-button.vertical {
+.project-button--vertical {
     width: 145px;
     height: 200px;
 }
 
-.project-button.large {
+.project-button--large {
     width: 300px;
     height: 200px;
 }
