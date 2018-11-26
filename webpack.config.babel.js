@@ -71,5 +71,8 @@ export default {
             favicon: 'assets/favicon.ico',
             xhtml: true,
         }),
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+    },
 };

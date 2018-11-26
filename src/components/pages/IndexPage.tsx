@@ -1,11 +1,11 @@
 import * as React from 'react';
-import WelcomeSection from 'components/sections/WelcomeSection';
+import AboutSection from 'components/sections/AboutSection';
 import InfoSection from 'components/sections/InfoSection';
 import ProjectsSection from 'components/sections/ProjectsSection';
 
 export default () => (
     <>
-        <WelcomeSection />
+        <AboutSection />
         <InfoSection />
         <ProjectsSection />
     </>

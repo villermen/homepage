@@ -1,7 +1,7 @@
 import * as React from 'react';
 import RandomAction from 'components/common/RandomAction';
 
-// TODO: About that status code...
+// TODO: About that status code... <meta name="robots" content="noindex" /> in <head> (portal?)
 export default () => (
     <section className="center">
         <p>

@@ -128,9 +128,10 @@ footer, footer.section {
     margin-top: -0.4rem;
 }
 
-.home-button img {
+.home-icon {
     width: 2rem;
     height: 2rem;
+    fill: #00c800;
 }
 
 .project-button-container {
