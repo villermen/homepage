@@ -1,26 +1,22 @@
 import * as React from 'react';
+import {Suspense} from 'react';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import IndexPage from 'components/pages/IndexPage';
 import NotFoundPage from 'components/pages/NotFoundPage';
 import HomeIcon from 'assets/icons/home.svg';
-import * as Loadable from 'react-loadable';
 
-const GameMakerPage = Loadable({
-    loader: () => import( /* webpackChunkName: "gamemaker" */ 'components/pages/GameMakerPage'),
-    loading: () => (<></>),
-});
-const TiBasicPage = Loadable({
-    loader: () => import(/* webpackChunkName: "tibasic" */ 'components/pages/TiBasicPage'),
-    loading:() => (<></>),
-});
+const GameMakerPage = React.lazy(() => import(/* webpackChunkName: "gamemaker" */ 'components/pages/GameMakerPage'));
+const TiBasicPage = React.lazy(() => import(/* webpackChunkName: "tibasic" */ 'components/pages/TiBasicPage'));
 
 const renderPageRouter = () => (
-    <Switch>
-        <Route exact path="/" component={IndexPage} />
-        <Route exact path="/gamemaker" component={GameMakerPage} />
-        <Route exact path="/tibasic" component={TiBasicPage} />
-        <Route component={NotFoundPage} />
-    </Switch>
+    <Suspense fallback={<section>Loading...</section>}>
+        <Switch>
+            <Route exact path="/" component={IndexPage} />
+            <Route exact path="/gamemaker" component={GameMakerPage} />
+            <Route exact path="/tibasic" component={TiBasicPage} />
+            <Route component={NotFoundPage} />
+        </Switch>
+    </Suspense>
 );
 
 const renderFooter = () => (
