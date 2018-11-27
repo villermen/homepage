@@ -13,6 +13,7 @@ export default {
         filename: '[name].js?[contenthash:8]',
         chunkFilename: '[name].js?[contenthash:8]',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/home/',
     },
     module: {
         rules: [
