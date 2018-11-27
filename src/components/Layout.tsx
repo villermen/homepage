@@ -3,6 +3,7 @@ import {Suspense} from 'react';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import IndexPage from 'components/pages/IndexPage';
 import NotFoundPage from 'components/pages/NotFoundPage';
+import Background from 'components/common/Background';
 import HomeIcon from 'assets/icons/home.svg';
 
 const GameMakerPage = React.lazy(() => import(/* webpackChunkName: "gamemaker" */ 'components/pages/GameMakerPage'));
@@ -12,8 +13,8 @@ const renderPageRouter = () => (
     <Suspense fallback={<section />}>
         <Switch>
             <Route exact path="/" component={IndexPage} />
-            <Route exact path="/gamemaker" render={() => <GameMakerPage />} />
-            <Route exact path="/tibasic" render={() => <TiBasicPage />} />
+            <Route path="/gamemaker" render={() => <GameMakerPage />} />
+            <Route path="/tibasic" render={() => <TiBasicPage />} />
             <Route component={NotFoundPage} />
         </Switch>
     </Suspense>
@@ -33,11 +34,10 @@ const renderFooter = () => (
     </footer>
 );
 
-// TODO: Background twirl based on time (for refreshes, requestAnimationFrame?)
 export default () => (
     <BrowserRouter basename="/home">
         <div className="container">
-            <div className="background" />
+            <Background />
             {renderPageRouter()}
             {renderFooter()}
         </div>

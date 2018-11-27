@@ -45,14 +45,14 @@ export default () => (
                 <ProjectButton
                     title="TI-Basic"
                     type="small"
-                    href="/tibasic"
+                    href="/tibasic/"
                     image={tiBasicImage}
                     useRouter={true}
                 />
                 <ProjectButton
                     title="GameMaker 7"
                     type="small"
-                    href="/gamemaker"
+                    href="/gamemaker/"
                     image={gameMakerImage}
                     useRouter={true}
                 />
