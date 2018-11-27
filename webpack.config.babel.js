@@ -5,21 +5,13 @@ const babelLoaderOptions = {
     cacheDirectory: true,
 };
 
-const fileLoaderOptions = {
-    // Removes the leading /assets/. Could be done using the regExp option but
-    // it does not convert Windows' backslashes for some reason
-    name: (path) => {
-        return path
-            .substr(__dirname.length + '/assets/'.length)
-            .replace('\\', '/')
-            + '?[hash:8]';
-    },
-};
-
 export default {
-    entry: path.resolve(__dirname, 'src/index.tsx'),
+    entry: {
+        main: path.resolve(__dirname, 'src/index.tsx'),
+    },
     output: {
-        filename: 'main.js?[contenthash:8]',
+        filename: '[name].js?[contenthash:8]',
+        chunkFilename: '[name].js?[contenthash:8]',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -29,16 +21,6 @@ export default {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: babelLoaderOptions,
-            },
-            {
-                test: /\.(jpg|png)$/,
-                include: path.resolve(__dirname, 'assets'),
-                loader: 'url-loader',
-                options: {
-                    limit: 20480, // 20 KiB
-                    fallback: 'file-loader',
-                    ...fileLoaderOptions,
-                },
             },
             {
                 test: /\.svg$/,
@@ -64,10 +46,18 @@ export default {
                 ],
             },
             {
-                test: /\.(exe|gmk|8xg|8xp)$/,
+                test: /\.(jpg|png|exe|gmk|8xg|8xp)$/,
                 include: path.resolve(__dirname, 'assets'),
                 loader: 'file-loader',
-                options: fileLoaderOptions,
+                options: {
+                    // Removes the leading /assets/. Could be done using the
+                    // regExp option but it does not convert Windows'
+                    // backslashes for some reason
+                    name: (path) => path
+                        .substr(__dirname.length + '/assets/'.length)
+                        .replace(/\\/g, '/')
+                        + '?[hash:8]',
+                },
             },
         ],
     },

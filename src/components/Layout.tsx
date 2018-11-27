@@ -3,11 +3,17 @@ import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import IndexPage from 'components/pages/IndexPage';
 import NotFoundPage from 'components/pages/NotFoundPage';
 import HomeIcon from 'assets/icons/home.svg';
-import GameMakerPage from 'components/pages/GameMakerPage';
-import TiBasicPage from 'components/pages/TiBasicPage';
+import * as Loadable from 'react-loadable';
 
-// TODO: Background twirl based on time (for refreshes)
-// TODO: Code split pages
+const GameMakerPage = Loadable({
+    loader: () => import( /* webpackChunkName: "gamemaker" */ 'components/pages/GameMakerPage'),
+    loading: () => (<></>),
+});
+const TiBasicPage = Loadable({
+    loader: () => import(/* webpackChunkName: "tibasic" */ 'components/pages/TiBasicPage'),
+    loading:() => (<></>),
+});
+
 const renderPageRouter = () => (
     <Switch>
         <Route exact path="/" component={IndexPage} />
@@ -31,6 +37,7 @@ const renderFooter = () => (
     </footer>
 );
 
+// TODO: Background twirl based on time (for refreshes, requestAnimationFrame?)
 export default () => (
     <BrowserRouter>
         <div className="container">
