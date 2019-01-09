@@ -104,6 +104,7 @@ const randomActions = [
     'chase \'em away! Chase \'em away', // Dumbo
     'hype a dead cat',
     'consider it done',
+    'am the critical error', // Lethal League
 ];
 
 export default () => (
