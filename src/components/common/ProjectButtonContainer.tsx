@@ -16,9 +16,9 @@ export default class ProjectButtonContainer extends PureComponent<Props, {}> {
     componentDidMount() {
         new Masonry(this.containerElement, {
             itemSelector: '.project-button',
-            columnWidth: 155,
             fitWidth: true,
-            transitionDuration: 0,
+            columnWidth: 150,
+            transitionDuration: 0, // Done through CSS
         });
     }
 

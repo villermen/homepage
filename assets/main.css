@@ -119,26 +119,25 @@ footer, footer.section {
 
 .project-button {
     display: block;
-    float: left;
     margin: 0 10px 10px 0;
     transition-duration: 200ms;
-    width: 145px;
-    height: 95px;
+    width: 140px;
+    height: 90px;
 }
 
 .project-button--horizontal {
-    width: 300px;
-    height: 95px;
+    width: 290px;
+    height: 90px;
 }
 
 .project-button--vertical {
-    width: 145px;
-    height: 200px;
+    width: 140px;
+    height: 190px;
 }
 
 .project-button--large {
-    width: 300px;
-    height: 200px;
+    width: 290px;
+    height: 190px;
 }
 
 .project-image {
