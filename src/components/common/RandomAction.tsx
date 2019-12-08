@@ -76,7 +76,7 @@ const randomActions = [
     'appear random',
     'get dangerous', // Darkwing duck
     'diversify my portfolio', // Stocks
-    'go dark', // Army I guess
+    'go dark',
     'go waaay back', // In-joke
     'feel the cosmos', // Katamari Damacy
     'want fries with that',
@@ -99,12 +99,25 @@ const randomActions = [
     'require stroyent', // ET:QW
     'forget about Freeman', // Half-Life
     'draw a vertical blank',
-    'double check for double meanings', // Saint Motel
+    'double check for double meanings', // Just My Type
     'rule the world and still finish all my homework', // WarioWare: Touched!
     'chase \'em away! Chase \'em away', // Dumbo
     'hype a dead cat',
     'consider it done',
     'am the critical error', // Lethal League
+    'cross that bridge when I find it', // The Reflex
+    'forget to wear my cape',
+    'buy bamboozle insurance',
+    'get the cool shoe shine', // 19-2000
+    'steal only what I can\'t afford', // Aladdin
+    'move these color TVs', // Money for Nothing
+    'live in the game', // Sword Art Online
+    'play by sense of smell', // Pinball Wizard
+    'create a perfect mess',
+    'accessorize',
+    'keep it simple',
+    'feel the burn',
+    'worry too much',
 ];
 
 export default () => (
