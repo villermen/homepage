@@ -25,6 +25,12 @@ export default () => (
                     image={fileBrowserImage}
                 />
                 <ProjectButton
+                    title="Minecraft server"
+                    type="large"
+                    href="/minecraft/"
+                    image={minecraftImage}
+                />
+                <ProjectButton
                     title="Lead to live"
                     type="vertical"
                     href="/leadtolive/"
@@ -67,12 +73,6 @@ export default () => (
         <section>
             <h3>Project archive</h3>
             <ProjectButtonContainer>
-                <ProjectButton
-                    title="Minecraft server"
-                    type="large"
-                    href="/archive/minecraft/"
-                    image={minecraftImage}
-                />
                 <ProjectButton
                     title="Toxic clansite server"
                     type="horizontal"
