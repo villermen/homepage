@@ -119,6 +119,7 @@ const randomActions = [
     'feel the burn',
     'worry too much',
     'make the right mistakes',
+    'stoke the fire',
 ];
 
 export default () => (
