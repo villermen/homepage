@@ -120,6 +120,7 @@ const randomActions = [
     'worry too much',
     'make the right mistakes',
     'stoke the fire',
+    'buy lead Nike shoes', // 19-2000
 ];
 
 export default () => (
