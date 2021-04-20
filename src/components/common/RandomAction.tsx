@@ -123,6 +123,7 @@ const randomActions = [
     'buy lead Nike shoes', // 19-2000
     'go big mode', // Ghost Hunters 3D
     'feed the sparrows too', // Parklife
+    'smash the beetles', // Kuh kuh kuh
 ];
 
 export default () => (
