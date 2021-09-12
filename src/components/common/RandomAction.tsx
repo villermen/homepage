@@ -124,6 +124,9 @@ const randomActions = [
     'go big mode', // Ghost Hunters 3D
     'feed the sparrows too', // Parklife
     'smash the beetles', // Kuh kuh kuh
+    'get thirsty while on guard duty', // No Saffron City for you buddy
+    'get telefragged', // ET:QW
+    'become sweat', // Running / Oppenheimer
 ];
 
 export default () => (
