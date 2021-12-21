@@ -18,7 +18,7 @@ const randomActions = [
     'randomize strings', // Meta
     'press the any key', // Game startup screens
     'skate cheaply', // Cheapskate
-    'force cookies down your throat', // Cookie warning BS
+    'accept all cookies', // Cookie warning regulation mess
     'judge a book by its cover',
     'run out of problems to fix', // To-do lists
     'solo Blink', // RS dungeoneering
