@@ -22,19 +22,16 @@ export default () => (
             on that are actually worth mentioning.
         </p>
         <div className="contactlinks clear">
-            <a className="contactlink gmail" href="mailto:villermen@gmail.com" title="Email">
+            <a className="contactlink" href="mailto:villermen@gmail.com" title="Email">
                 <GmailIcon />
             </a>
-            <a className="contactlink github" href="https://github.com/villermen" title="GitHub">
+            <a className="contactlink" href="https://github.com/villermen" title="GitHub">
                 <GitHubIcon />
             </a>
-            <span
-                className="contactlink discord"
-                title="Discord"
-                onClick={() => window.prompt('Copy and add below Discord tag:', 'Villermen#6073')}>
+            <a className="contactlink" href="https://discordapp.com/users/145263433883844609" title="Discord">
                 <DiscordIcon />
-            </span>
-            <a className="contactlink steam" href="http://steamcommunity.com/id/villermen" title="Steam">
+            </a>
+            <a className="contactlink" href="http://steamcommunity.com/id/villermen" title="Steam">
                 <SteamIcon />
             </a>
             <a className="contactlink youtube" href="https://www.youtube.com/user/villermen" title="YouTube">
