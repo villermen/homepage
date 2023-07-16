@@ -12,7 +12,10 @@ body {
     background-color: black;
     color: #00c800;
     font-family: "Roboto", sans-serif;
-    padding: 0.8rem 0.8rem 0 0.8rem;
+}
+
+.container {
+    padding: 2rem 1rem 1rem 1rem;
 }
 
 a img {
@@ -52,10 +55,6 @@ section, .section {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-}
-
-main {
-    display: block;
 }
 
 footer, footer.section {
