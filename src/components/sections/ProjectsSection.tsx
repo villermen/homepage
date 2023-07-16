@@ -11,6 +11,7 @@ import minecraftImage from 'assets/images/project-buttons/minecraft.png';
 import toxicImage from 'assets/images/project-buttons/toxic.png';
 import vaporImage from 'assets/images/project-buttons/vapor.png';
 import omnicashImage from 'assets/images/project-buttons/omnicash.png';
+import toolboxImage from 'assets/images/project-buttons/toolbox.png';
 import ProjectButtonContainer from 'components/common/ProjectButtonContainer';
 
 export default () => (
@@ -25,16 +26,16 @@ export default () => (
                     image={fileBrowserImage}
                 />
                 <ProjectButton
-                    title="Minecraft server"
-                    type="large"
-                    href="/minecraft/"
-                    image={minecraftImage}
-                />
-                <ProjectButton
                     title="Lead to live"
                     type="vertical"
                     href="/leadtolive/"
                     image={leadToLiveImage}
+                />
+                <ProjectButton
+                    title="Minecraft server"
+                    type="large"
+                    href="/minecraft/"
+                    image={minecraftImage}
                 />
                 <ProjectButton
                     title="RuneScape player lookup"
@@ -54,6 +55,12 @@ export default () => (
                     href="/tibasic/"
                     image={tiBasicImage}
                     useRouter={true}
+                />
+                <ProjectButton
+                    title="Toolbox"
+                    type="horizontal"
+                    href="https://nuijten.info/toolbox/"
+                    image={toolboxImage}
                 />
                 <ProjectButton
                     title="GameMaker 7"

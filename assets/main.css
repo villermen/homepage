@@ -49,6 +49,9 @@ section, .section {
     padding: 1rem;
     position: relative;
     min-width: 315px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main {

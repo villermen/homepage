@@ -19,6 +19,7 @@ export default class ProjectButtonContainer extends PureComponent<Props, {}> {
             fitWidth: true,
             columnWidth: 150,
             transitionDuration: 0, // Done through CSS
+            horizontalOrder: false,
         });
     }
 
