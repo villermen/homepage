@@ -9,17 +9,13 @@ import GitHubIcon from 'assets/icons/github.svg';
 
 export default () => (
     <section>
-        <h1>Welcome to my website</h1>
         <p>
             <img src={avatarImage} className="avatar" alt="Avatar" />
             Hi, I'm Villermen, I sometimes <RandomAction />.
         </p>
         <p>
-            I enjoy solving complicated problems in whatever programming language I know. This page is pretty much a
-            display
-            of things I've created in my spare and not so spare time. Below is a display of some of the projects I've
-            worked
-            on that are actually worth mentioning.
+            I enjoy solving complicated problems in whatever programming language I know. Listed below are some of the
+            projects I've worked on in my spare, and sometimes less spare, time.
         </p>
         <div className="contactlinks clear">
             <a className="contactlink" href="mailto:villermen@gmail.com" title="Email">

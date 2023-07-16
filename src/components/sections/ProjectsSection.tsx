@@ -17,7 +17,6 @@ import ProjectButtonContainer from 'components/common/ProjectButtonContainer';
 export default () => (
     <>
         <section>
-            <h3>Projects that <em>probably</em> still work</h3>
             <ProjectButtonContainer>
                 <ProjectButton
                     title="File browser"
@@ -45,7 +44,7 @@ export default () => (
                 />
                 <ProjectButton
                     title="Soundboard"
-                    type="small"
+                    type="vertical"
                     href="/soundboard/"
                     image={soundboardImage}
                 />
@@ -57,12 +56,6 @@ export default () => (
                     useRouter={true}
                 />
                 <ProjectButton
-                    title="Toolbox"
-                    type="horizontal"
-                    href="https://nuijten.info/toolbox/"
-                    image={toolboxImage}
-                />
-                <ProjectButton
                     title="GameMaker 7"
                     type="small"
                     href="/gamemaker/"
@@ -70,16 +63,17 @@ export default () => (
                     useRouter={true}
                 />
                 <ProjectButton
+                    title="Toolbox"
+                    type="horizontal"
+                    href="https://nuijten.info/toolbox/"
+                    image={toolboxImage}
+                />
+                <ProjectButton
                     title="Is it team time yet?"
                     type="small"
                     href="/isitteamtimeyet/"
                     image={isItTeamTimeYetImage}
                 />
-            </ProjectButtonContainer>
-        </section>
-        <section>
-            <h3>Project archive</h3>
-            <ProjectButtonContainer>
                 <ProjectButton
                     title="Toxic clansite server"
                     type="horizontal"
