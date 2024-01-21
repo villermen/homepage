@@ -127,6 +127,7 @@ const randomActions = [
     'get thirsty while on guard duty', // No Saffron City for you buddy
     'get telefragged', // ET:QW
     'become sweat', // Running / Oppenheimer
+    'walk to work', // Glory to Arstotzka
 ];
 
 export default () => (
