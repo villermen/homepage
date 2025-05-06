@@ -1,4 +1,5 @@
 import React, {ReactElement, useEffect, useRef, useState} from 'react';
+import backgroundImage from 'assets/images/background.png';
 
 const turnDuration = 100000; // 100s
 
@@ -28,6 +29,10 @@ export function Background(): ReactElement {
     }, []);
 
     return (
-        <div className="background" ref={backgroundElement} />
+        <div
+            className="background"
+            ref={backgroundElement}
+            style={{backgroundImage: `url('${backgroundImage}')`}}
+        />
     );
 }
