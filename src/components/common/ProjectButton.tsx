@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import React, {ReactElement} from 'react';
+import {Link} from 'react-router-dom';
 
-interface Props {
+interface ProjectButtonProps {
     type: string,
     title: string,
     image: string,
@@ -9,7 +9,7 @@ interface Props {
     useRouter?: boolean,
 }
 
-export default (props: Props) => {
+export function ProjectButton(props: ProjectButtonProps): ReactElement {
     const linkProps = {
         className: `project-button project-button--${props.type}`,
         href: props.href,

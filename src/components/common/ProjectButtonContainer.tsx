@@ -1,20 +1,13 @@
-import * as React from 'react';
-import {PureComponent, ReactNode} from 'react';
 import Masonry from 'masonry-layout';
+import React, {ReactElement, ReactNode} from 'react';
 
-interface Props {
+interface ProjectButtonContainer {
     children: ReactNode,
 }
 
-export default class ProjectButtonContainer extends PureComponent<Props, {}> {
-    containerElement?: HTMLElement;
-
-    constructor(props: Props) {
-        super(props);
-    }
-
-    componentDidMount() {
-        new Masonry(this.containerElement, {
+export function ProjectButtonContainer(props: ProjectButtonContainer): ReactElement {
+    function initializeMasonry(containerElement: HTMLElement): void {
+        new Masonry(containerElement, {
             itemSelector: '.project-button',
             fitWidth: true,
             columnWidth: 150,
@@ -22,14 +15,12 @@ export default class ProjectButtonContainer extends PureComponent<Props, {}> {
         });
     }
 
-    render() {
-        return (
-            <div
-                className="project-button-container"
-                ref={(element) => this.containerElement = element}
-            >
-                {this.props.children}
-            </div>
-        );
-    }
+    return (
+        <div
+            className="project-button-container"
+            ref={initializeMasonry}
+        >
+            {props.children}
+        </div>
+    );
 }

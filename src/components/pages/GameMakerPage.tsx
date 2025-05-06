@@ -1,24 +1,24 @@
-import * as React from 'react';
 import conveyorsDownload from 'assets/downloads/gamemaker/conveyors.exe';
 import conveyorsProjectDownload from 'assets/downloads/gamemaker/conveyors.gmk';
+import dtm08Download from 'assets/downloads/gamemaker/dtm-0.8.exe';
+import dtm36Download from 'assets/downloads/gamemaker/dtm-3.6.exe';
+import dtmProjectDownload from 'assets/downloads/gamemaker/dtm.gmk';
+import sentinelDownload from 'assets/downloads/gamemaker/sentinel.exe';
+import visualizedDownload from 'assets/downloads/gamemaker/visualized.exe';
+import visualizedProjectDownload from 'assets/downloads/gamemaker/visualized.gmk';
 import conveyorsImage1 from 'assets/images/gamemaker/conveyors1.png';
 import conveyorsImage2 from 'assets/images/gamemaker/conveyors2.png';
 import conveyorsImage3 from 'assets/images/gamemaker/conveyors3.png';
-import sentinelDownload from 'assets/downloads/gamemaker/sentinel.exe';
+import dtmImage1 from 'assets/images/gamemaker/dtm1.png';
+import dtmImage2 from 'assets/images/gamemaker/dtm2.png';
 import sentinelImage1 from 'assets/images/gamemaker/sentinel1.png';
 import sentinelImage2 from 'assets/images/gamemaker/sentinel2.png';
 import sentinelImage3 from 'assets/images/gamemaker/sentinel3.png';
 import sentinelImage4 from 'assets/images/gamemaker/sentinel4.png';
-import visualizedDownload from 'assets/downloads/gamemaker/visualized.exe';
-import visualizedProjectDownload from 'assets/downloads/gamemaker/visualized.gmk';
 import visualizedImage1 from 'assets/images/gamemaker/visualized1.png';
 import visualizedImage2 from 'assets/images/gamemaker/visualized2.png';
 import visualizedImage3 from 'assets/images/gamemaker/visualized3.png';
-import dtm08Download from 'assets/downloads/gamemaker/dtm-0.8.exe';
-import dtm36Download from 'assets/downloads/gamemaker/dtm-3.6.exe';
-import dtmProjectDownload from 'assets/downloads/gamemaker/dtm.gmk';
-import dtmImage1 from 'assets/images/gamemaker/dtm1.png';
-import dtmImage2 from 'assets/images/gamemaker/dtm2.png';
+import React from 'react';
 
 export default () => (
     <>

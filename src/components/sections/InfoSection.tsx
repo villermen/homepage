@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Clock from 'components/common/Clock';
+import {Clock} from 'components/common/Clock';
+import React from 'react';
 
 export default () => (
     <section>

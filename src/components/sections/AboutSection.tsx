@@ -1,11 +1,11 @@
-import * as React from 'react';
-import RandomAction from 'components/common/RandomAction';
-import avatarImage from 'assets/images/avatar.png';
-import SteamIcon from 'assets/icons/steam.svg';
 import DiscordIcon from 'assets/icons/discord.svg';
-import GmailIcon from 'assets/icons/gmail.svg';
-import YouTubeIcon from 'assets/icons/youtube.svg';
 import GitHubIcon from 'assets/icons/github.svg';
+import GmailIcon from 'assets/icons/gmail.svg';
+import SteamIcon from 'assets/icons/steam.svg';
+import YouTubeIcon from 'assets/icons/youtube.svg';
+import avatarImage from 'assets/images/avatar.png';
+import {RandomAction} from 'components/common/RandomAction';
+import React from 'react';
 
 export default () => (
     <section>
@@ -24,10 +24,10 @@ export default () => (
             <a className="contactlink" href="https://github.com/villermen" title="GitHub">
                 <GitHubIcon />
             </a>
-            <a className="contactlink" href="https://discordapp.com/users/145263433883844609" title="Discord">
+            <a className="contactlink" href="https://discord.com/users/145263433883844609" title="Discord">
                 <DiscordIcon />
             </a>
-            <a className="contactlink" href="http://steamcommunity.com/id/villermen" title="Steam">
+            <a className="contactlink" href="https://steamcommunity.com/id/villermen" title="Steam">
                 <SteamIcon />
             </a>
             <a className="contactlink youtube" href="https://www.youtube.com/user/villermen" title="YouTube">

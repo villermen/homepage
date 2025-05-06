@@ -1,19 +1,19 @@
-import * as React from 'react';
-import calculatorImage from 'assets/images/tibasic/calculator.png';
+import avoiderDownload from 'assets/downloads/tibasic/AVOIDER.8xp';
+import fourDownload from 'assets/downloads/tibasic/FOUR.8xp';
+import freemoveDownload from 'assets/downloads/tibasic/FREEMOVE.8xp';
+import mastermindDownload from 'assets/downloads/tibasic/MSTRMND.8xp';
 import omniklokDownload from 'assets/downloads/tibasic/OMNIKLOK.8xg';
+import yahtzeeDownload from 'assets/downloads/tibasic/YAHTZEE.8xp';
+import avoiderImage from 'assets/images/tibasic/avoider.png';
+import calculatorImage from 'assets/images/tibasic/calculator.png';
+import fourImage from 'assets/images/tibasic/four.png';
+import freemoveImage from 'assets/images/tibasic/freemove.png';
+import mastermindImage from 'assets/images/tibasic/mastermind.png';
 import omniklokImage1 from 'assets/images/tibasic/omniklok1.png';
 import omniklokImage2 from 'assets/images/tibasic/omniklok2.png';
 import omniklokImage3 from 'assets/images/tibasic/omniklok3.png';
-import mastermindDownload from 'assets/downloads/tibasic/MSTRMND.8xp';
-import mastermindImage from 'assets/images/tibasic/mastermind.png';
-import yahtzeeDownload from 'assets/downloads/tibasic/YAHTZEE.8xp';
 import yahtzeeImage from 'assets/images/tibasic/yahtzee.png';
-import fourDownload from 'assets/downloads/tibasic/FOUR.8xp';
-import fourImage from 'assets/images/tibasic/four.png';
-import freemoveDownload from 'assets/downloads/tibasic/FREEMOVE.8xp';
-import freemoveImage from 'assets/images/tibasic/freemove.png';
-import avoiderDownload from 'assets/downloads/tibasic/AVOIDER.8xp';
-import avoiderImage from 'assets/images/tibasic/avoider.png';
+import React from 'react';
 
 export default () => (
     <>

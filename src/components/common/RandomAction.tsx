@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {ReactElement} from 'react';
 
 const randomActions = [
     'create things', // Generic
@@ -130,6 +130,6 @@ const randomActions = [
     'walk to work', // Glory to Arstotzka
 ];
 
-export default () => (
-    <>{randomActions[Math.floor(Math.random() * randomActions.length)]}</>
-);
+export function RandomAction(): ReactElement {
+    return <>{randomActions[Math.floor(Math.random() * randomActions.length)]}</>;
+};

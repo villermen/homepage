@@ -1,33 +1,33 @@
-import * as React from 'react';
+import React, {ReactElement, useEffect, useRef, useState} from 'react';
 
 const turnDuration = 100000; // 100s
 
-export default class Background extends React.PureComponent {
-    background?: HTMLElement;
-    animationFrameRequestId?: number;
+export function Background(): ReactElement {
+    const [animationRequestId, setAnimationRequestId] = useState<number>(null);
+    const backgroundElement = useRef<HTMLDivElement>(null);
 
-    componentDidMount() {
-        window.requestAnimationFrame(this.updateAnimation);
-    }
-
-    componentWillUnmount() {
-        if (this.animationFrameRequestId) {
-            window.cancelAnimationFrame(this.animationFrameRequestId);
-        }
-    }
-
-    updateAnimation = () => {
-        if (this.background) {
+    function updateAnimation(): void {
+        if (backgroundElement.current) {
             const rotation = new Date().getTime() % turnDuration / turnDuration;
-            this.background.style.transform = `rotate(${rotation}turn)`;
+            backgroundElement.current.style.transform = `rotate(${rotation}turn)`;
         }
 
-        window.requestAnimationFrame(this.updateAnimation);
-    };
-
-    render() {
-        return (
-            <div className="background" ref={(background) => this.background = background} />
-        );
+        setAnimationRequestId(window.requestAnimationFrame(updateAnimation));
     }
+
+    useEffect(() => {
+        updateAnimation();
+
+        return () => {
+            if (!animationRequestId) {
+                return;
+            }
+
+            window.cancelAnimationFrame(animationRequestId);
+        };
+    }, []);
+
+    return (
+        <div className="background" ref={backgroundElement} />
+    );
 }

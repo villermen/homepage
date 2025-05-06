@@ -1,5 +1,5 @@
-import * as React from 'react';
-import RandomAction from 'components/common/RandomAction';
+import {RandomAction} from 'components/common/RandomAction';
+import React from 'react';
 
 // TODO: About that status code... <meta name="robots" content="noindex" /> in <head> (portal?)
 export default () => (

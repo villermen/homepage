@@ -1,10 +1,9 @@
-import * as React from 'react';
-import {Suspense} from 'react';
-import {BrowserRouter, Link, Outlet, Route, Routes} from 'react-router-dom';
+import HomeIcon from 'assets/icons/home.svg';
+import {Background} from 'components/common/Background';
 import IndexPage from 'components/pages/IndexPage';
 import NotFoundPage from 'components/pages/NotFoundPage';
-import Background from 'components/common/Background';
-import HomeIcon from 'assets/icons/home.svg';
+import React, {Suspense} from 'react';
+import {BrowserRouter, Link, Outlet, Route, Routes} from 'react-router-dom';
 
 const GameMakerPage = React.lazy(() => import(/* webpackChunkName: "gamemaker" */ 'components/pages/GameMakerPage'));
 const TiBasicPage = React.lazy(() => import(/* webpackChunkName: "tibasic" */ 'components/pages/TiBasicPage'));
