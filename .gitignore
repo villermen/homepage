@@ -1,4 +1,4 @@
 /.idea/
 /node_modules/
-/dist/*
-!/dist/.htaccess
+/public/*
+!/public/.htaccess

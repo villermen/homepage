@@ -12,7 +12,7 @@ export default {
     output: {
         filename: '[name].js?[contenthash:8]',
         chunkFilename: '[name].js?[contenthash:8]',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         publicPath: '/home/',
     },
     module: {
@@ -32,9 +32,9 @@ export default {
                         options: babelLoaderOptions,
                     },
                     {
-                        loader: 'react-svg-loader',
+                        loader: '@svgr/webpack',
                         options: {
-                            jsx: true,
+                            babel: false,
                         }
                     }
                 ],
@@ -81,6 +81,9 @@ export default {
         }),
     ],
     devServer: {
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
         historyApiFallback: true,
     },
 };

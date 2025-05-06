@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Suspense} from 'react';
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Link, Outlet, Route, Routes} from 'react-router-dom';
 import IndexPage from 'components/pages/IndexPage';
 import NotFoundPage from 'components/pages/NotFoundPage';
 import Background from 'components/common/Background';
@@ -11,25 +11,25 @@ const TiBasicPage = React.lazy(() => import(/* webpackChunkName: "tibasic" */ 'c
 
 const renderPageRouter = () => (
     <Suspense fallback={<section />}>
-        <Switch>
-            <Route exact path="/" component={IndexPage} />
-            <Route path="/gamemaker" render={() => <GameMakerPage />} />
-            <Route path="/tibasic" render={() => <TiBasicPage />} />
-            <Route component={NotFoundPage} />
-        </Switch>
+        <Routes>
+            <Route path="/" element={<IndexPage />} />
+            <Route path="/gamemaker" element={<GameMakerPage />} />
+            <Route path="/tibasic" element={<TiBasicPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+        </Routes>
     </Suspense>
 );
 
 const renderFooter = () => (
     <footer id="footer" className="section">
-        <Switch>
-            <Route exact path="/" />
-            <Route>
+        <Routes>
+            <Route path="/" element={<Outlet />} />
+            <Route path="*" element={
                 <Link to="/" className="home-button" title="Home">
                     <HomeIcon className="home-icon" />
                 </Link>
-            </Route>
-        </Switch>
+            } />
+        </Routes>
         © 2011-{new Date().getFullYear()} Villermen
     </footer>
 );
