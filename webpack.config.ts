@@ -1,18 +1,21 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const babelLoaderOptions = {
-    cacheDirectory: true,
+const babelLoader = {
+    loader: 'babel-loader',
+    options: {
+        cacheDirectory: true,
+    },
 };
 
 export default {
     entry: {
-        main: path.resolve(__dirname, 'src/index.tsx'),
+        main: path.resolve(import.meta.dirname, 'src/index.tsx'),
     },
     output: {
         filename: '[name].js?[contenthash:8]',
         chunkFilename: '[name].js?[contenthash:8]',
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(import.meta.dirname, 'public'),
         publicPath: '/home/',
     },
     module: {
@@ -20,17 +23,15 @@ export default {
             {
                 test: /\.(js|jsx|ts|tsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                options: babelLoaderOptions,
+                use: [
+                    babelLoader,
+                ],
             },
             {
                 test: /\.svg$/,
-                include: path.resolve(__dirname, 'assets'),
+                include: path.resolve(import.meta.dirname, 'assets'),
                 use: [
-                    {
-                        loader: 'babel-loader',
-                        options: babelLoaderOptions,
-                    },
+                    babelLoader,
                     {
                         loader: '@svgr/webpack',
                         options: {
@@ -42,7 +43,9 @@ export default {
             {
                 test: /\.css$/,
                 use: [
-                    { loader: 'style-loader' },
+                    {
+                        loader: 'style-loader',
+                    },
                     {
                         loader: 'css-loader',
                         options: {
@@ -53,27 +56,31 @@ export default {
             },
             {
                 test: /\.(jpg|png|exe|gmk|8xg|8xp)$/,
-                include: path.resolve(__dirname, 'assets'),
-                loader: 'file-loader',
-                options: {
-                    // Removes the leading /assets/. Could be done using the
-                    // regExp option but it does not convert Windows'
-                    // backslashes for some reason
-                    name: (path) => path
-                        .substr(__dirname.length + '/assets/'.length)
-                        .replace(/\\/g, '/')
-                        + '?[hash:8]',
-                },
+                include: path.resolve(import.meta.dirname, 'assets'),
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            // Removes the leading /assets/. Could be done using the
+                            // regExp option but it does not convert Windows'
+                            // backslashes for some reason
+                            name: (path) => path
+                                    .substr(import.meta.dirname.length + '/assets/'.length)
+                                    .replace(/\\/g, '/')
+                                + '?[hash:8]',
+                        },
+                    }
+                ],
             },
         ],
     },
     resolve: {
         modules: [
-            path.resolve(__dirname, 'src'),
-            path.resolve(__dirname, 'node_modules'),
+            path.resolve(import.meta.dirname, 'src'),
+            path.resolve(import.meta.dirname, 'node_modules'),
         ],
         alias: {
-            assets: path.resolve(__dirname, 'assets'),
+            assets: path.resolve(import.meta.dirname, 'assets'),
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
@@ -87,7 +94,7 @@ export default {
     ],
     devServer: {
         static: {
-            directory: path.join(__dirname, 'public'),
+            directory: path.join(import.meta.dirname, 'public'),
         },
         historyApiFallback: true,
     },
